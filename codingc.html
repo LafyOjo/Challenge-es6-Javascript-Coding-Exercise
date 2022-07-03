@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+  
+  <head>
+    <link href='https://fonts.googleapis.com/css?family=Raleway:400, 600' rel='stylesheet' type='text/css'>
+    <link href='style.css' rel='stylesheet' type='text/css'/>
+      <style>
+       html, body {
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333333;
+  position: fixed;
+  width: 100%;
+  z-index: 5;
+}
+
+nav {
+  margin: 0;
+  padding: 20px 0;
+}
+
+nav li {
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  display: inline-block;
+  width: 80px;
+  text-align: center;
+}
+
+main {
+  text-align: center;
+  position: relative;
+  top: 80px;
+}
+
+main h1 {
+  color: #333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 70px;
+  margin-top: 0px;
+  padding-top: 80px;
+  margin-bottom: 80px;
+  text-transform: uppercase;
+}
+
+footer {
+  background-color: #333;
+  color: #fff;
+  padding: 0px;
+  width: 100%;
+}
+
+footer p {
+  font-family: 'Raleway', sans-serif;
+  text-transform: uppercase;
+  font-size: 11px;
+}
+
+.container {
+  max-width: 940px;
+  margin: 0 auto;
+  padding: 70px 10px;
+  text-align: center;
+}
+
+.jumbotron {
+  height: 800px;
+  background-image: url("https://content.codecademy.com/projects/broadway/bg.jpg");
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+.btn-main {
+  background-color: #333;
+  color: #fff;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: 1.3px;
+  padding: 16px 40px;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.btn-default {
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 10px;
+  letter-spacing: 1.3px;
+  padding: 10px 20px;
+  text-decoration: none;
+  text-transform: uppercase;  
+  margin-bottom: 20px;      
+}
+
+.supporting {
+  padding-top: 120px;
+  padding-bottom: 100px;
+}
+
+.supporting .col {
+  font-family: 'Raleway', sans-serif;
+  text-align: center;
+  display: inline-block;
+  height: 630px;
+  width: 320px;
+  border: 2px solid black;
+  padding: 20px;
+    margin: 40px;
+}
+
+.supporting img {
+  height: 32px;
+}
+
+.supporting h2 {
+  font-weight: 600;
+  font-size: 23px;
+  text-transform: uppercase;
+}
+
+.supporting p {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 20px;
+  padding: 0 20px;
+  margin-bottom: 20px;
+}
+
+.supporting a {
+  background-color: white;
+  color: #333333;
+  font-family: 'Raleway', sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 1.3px;
+  text-decoration: none;
+  text-transform: uppercase;
+  padding: 10px;
+  margin-bottom: 10px;
+  border: 2px solid #333333; 
+}
+
+@media (max-width: 500px) {
+  main h1 {
+    font-size: 50px;
+    padding: 0 40px;
+  }
+
+  .supporting .col {
+    width: 100%;
+  }
+}
+      
+      </style>
+       <script>
+        window.onload = () => {
+            randomUserGenerator();
+            randomUserGenerator1();
+            randomUserGenerator2();
+            randomUserGenerator3();
+        }
+        
+        const randomUserGenerator = () => {
+            fetch('http://www.boredapi.com/api/activity')
+             .then((response) => {
+                return response.json()
+            }).then((data) => {
+                var activity = data.activity
+                console.log(activity)
+                var type = data.type
+                console.log(type)
+                var access = data.accessibility
+                console.log(access)
+                var key = data.key
+                console.log(key)
+                var part = data.participants
+                console.log(part)
+                var price = data.price 
+                console.log(price)
+                var link = data.link
+                console.log(link)
+                
+                console.log(data)
+                
+                document.getElementById('name').innerText = activity;
+                document.getElementById('type').innerText = type;
+                document.getElementById('access').innerText = access;
+                document.getElementById('key').innerText = key;
+                document.getElementById('part').innerText = part;
+                document.getElementById('link').innerText = link;
+                document.getElementById('price').innerText = price;
+            })
+        }
+        
+        const randomUserGenerator1 = () => {
+            fetch('http://www.boredapi.com/api/activity')
+             .then((response) => {
+                return response.json()
+            }).then((data) => {
+                var activity = data.activity
+                console.log(activity)
+                var type = data.type
+                console.log(type)
+                var access = data.accessibility
+                console.log(access)
+                var key = data.key
+                console.log(key)
+                var part = data.participants
+                console.log(part)
+                var price = data.price 
+                console.log(price)
+                var link = data.link
+                console.log(link)
+                
+                console.log(data)
+                
+                document.getElementById('name1').innerText = activity;
+                document.getElementById('type1').innerText = type;
+                document.getElementById('access1').innerText = access;
+                document.getElementById('key1').innerText = key;
+                document.getElementById('part1').innerText = part;
+                document.getElementById('link1').innerText = link;
+                document.getElementById('price1').innerText = price;
+            })
+        }
+        
+        const randomUserGenerator2 = () => {
+            fetch('http://www.boredapi.com/api/activity')
+             .then((responser) => {
+                return responser.json()
+            }).then((data) => {
+                var activity = data.activity
+                console.log(activity)
+                var type = data.type
+                console.log(type)
+                var access = data.accessibility
+                console.log(access)
+                var key = data.key
+                console.log(key)
+                var part = data.participants
+                console.log(part)
+                var price = data.price 
+                console.log(price)
+                var link = data.link
+                console.log(link)
+                
+                console.log(data)
+                
+                document.getElementById('name2').innerText = activity;
+                document.getElementById('type2').innerText = type;
+                document.getElementById('access2').innerText = access;
+                document.getElementById('key2').innerText = key;
+                document.getElementById('part2').innerText = part;
+                document.getElementById('link2').innerText = link;
+                document.getElementById('price2').innerText = price;
+            })
+        }
+        
+        const randomUserGenerator3 = () => {
+            fetch('http://www.boredapi.com/api/activity')
+             .then((response) => {
+                return response.json()
+            }).then((data) => {
+                var activity = data.activity
+                console.log(activity)
+                var type = data.type
+                console.log(type)
+                var access = data.accessibility
+                console.log(access)
+                var key = data.key
+                console.log(key)
+                var part = data.participants
+                console.log(part)
+                var price = data.price 
+                console.log(price)
+                var link = data.link
+                console.log(link)
+                
+                console.log(data)
+                
+                document.getElementById('name3').innerText = activity;
+                document.getElementById('type3').innerText = type;
+                document.getElementById('access3').innerText = access;
+                document.getElementById('key3').innerText = key;
+                document.getElementById('part3').innerText = part;
+                document.getElementById('link3').innerText = link;
+                document.getElementById('price3').innerText = price;
+            })
+        }
+      </script>
+        
+  </head>
+
+  <body>
+    <header>
+        <nav>
+          <ul>
+            <li> About </li> <li> Work </li> <li> Team </li> <li> Contact </li>
+          </ul>
+        </nav>
+    </header>
+
+    <main>
+      <div class="jumbotron">
+        <div class="container">  
+          <h1>We are Lafoire</h1>
+          <a href="#" class="btn-main"> By Isaiah Ojo </a>
+        </div>
+      </div>
+    </main>
+
+    <section class="supporting">
+      <div class="container">
+        
+        <div class="col">
+          <h1> Activities </h1>
+            <br>
+         <h3> Acitivity </h3><p id="name"> </p>
+         <h3> Type </h3><p id="type"> </p>
+         <h3> Participants </h3><p id="part"> </p>
+         <h3> Price </h3><p id="price"> </p>
+         <h3> Link </h3><p id="link"> </p>
+         <h3> Key </h3><p id="key"> </p>
+         <h3> Accessibility </h3><p id="access"> </p>
+        </div>
+        
+        <div class="col">
+          <h1> Activities </h1>
+            <br>
+         <h3> Acitivity </h3><p id="name1"> </p>
+         <h3> Type </h3><p id="type1"> </p>
+         <h3> Participants </h3><p id="part1"> </p>
+         <h3> Price </h3><p id="price1"> </p>
+         <h3> Link </h3><p id="link1"> </p>
+         <h3> Key </h3><p id="key1"> </p>
+         <h3> Accessibility </h3><p id="access1"> </p>
+        </div>
+        
+        <div class="col">
+          <h1> Activities </h1>
+            <br>
+         <h3> Acitivity </h3><p id="name2"> </p>
+         <h3> Type </h3><p id="type2"> </p>
+         <h3> Participants </h3><p id="part2"> </p>
+         <h3> Price </h3><p id="price2"> </p>
+         <h3> Link </h3><p id="link2"> </p>
+         <h3> Key </h3><p id="key2"> </p>
+         <h3> Accessibility </h3><p id="access2"> </p>
+        </div>
+          
+          <div class="col">
+        <h1> Activities </h1>
+               <br>
+         <h3> Acitivity </h3><p id="name3"> </p>
+         <h3> Type </h3><p id="type3"> </p>
+         <h3> Participants </h3><p id="part3"> </p>
+         <h3> Price </h3><p id="price3"> </p>
+         <h3> Link </h3><p id="link3"> </p>
+         <h3> Key </h3><p id="key3"> </p>
+         <h3> Accessibility </h3><p id="access3"> </p>
+      </div>
+        </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; lafoire 2022 </p>
+      </div>
+    </footer>
+    
+  </body>
+</html>
